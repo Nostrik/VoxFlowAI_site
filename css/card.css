@@ -1,0 +1,70 @@
+.case-cards {
+  display: flex;
+  flex-wrap: wrap;            /* позволяет карточкам переноситься на следующую строку */
+  gap: 24px;                  /* расстояние между карточками */
+  justify-content: center;    /* выравнивание карточек по центру */
+  align-items: stretch;       /* карточки одинаковой высоты */
+  padding: 40px 20px;         /* отступы вокруг блока */
+  box-sizing: border-box;
+}
+
+/* Чтобы карточки красиво ужимались */
+.case-cards .neon-card {
+  flex: 1 1 300px;            /* каждая занимает минимум 300px, а остальное пространство делит */
+  max-width: 360px;           /* чтобы не растягивались слишком сильно */
+}
+
+.neon-card {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+  color: #dfefff;
+  font-family: Inter, system-ui, sans-serif;
+}
+.neon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(138, 99, 255, 0.2);
+  border-color: #8a63ff;
+}
+
+.neon-header{display:flex;gap:12px;align-items:center}
+.neon-title-block{flex:1}
+.neon-title{
+  font-size:18px;
+  font-weight:700;
+  /* color:#ff2d95; */
+}
+.neon-subtitle{font-size:12px;color:rgba(223,239,255,0.7);margin-top:4px}
+
+.neon-rating{text-align:right}
+.neon-stars span{color:#ff2d95;}
+.neon-reviews{font-size:12px;color:rgba(223,239,255,0.7)}
+
+.neon-divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);margin:16px 0;border-radius:2px}
+
+.neon-player{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center}
+.neon-play-area{display:flex;align-items:center;justify-content:center}
+.neon-play-btn{height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, rgba(0,0,0,0.25), rgba(255,255,255,0.02));cursor:pointer;border:1px solid rgba(0,0,0,0.4);}
+.neon-play-btn svg path{fill:#f3f0f7}
+
+.neon-transcript{font-size:13px;color:#d7f6ff}
+.neon-small{font-size:12px;color:rgba(223,239,255,0.7);margin-top:6px}
+
+.neon-visualizer{display:flex;gap:6px;align-items:end;height:40px;margin-top:10px}
+.neon-bar{flex:1;height:6px;border-radius:3px;background:linear-gradient(180deg,#00e6ff,#ff2d95);opacity:.85;transition:height 80ms linear}
+
+.neon-examples{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.neon-example{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;font-size:13px;color:#eaf9ff}
+
+.neon-audio-progress {
+  width: 100%;
+  margin-top: 6px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(138, 99, 255, 0.2);
+  accent-color: #8a63ff; /* цвет бегунка */
+  cursor: pointer;
+}

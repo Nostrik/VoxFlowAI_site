@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxFlow.AI — Голосовые интерфейсы нового поколения</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/card.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header-wrapper">
+  <div class="header">
+    <div class="logo">VoxFlow.AI</div>
+    <nav>
+      <a href="#features">Преимущества</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Герой-секция -->
+
+  <section class="section hero" id="hero">
+  <div class="hero-content">
+    <h1 class="section-title">Голосовые интерфейсы нового поколения</h1>
+    <p class="section-subtitle">
+      Автоматизируйте взаимодействие с клиентами с помощью голосовых ассистентов и интеллектуальных чат-ботов. 
+      Мгновенные ответы, безопасное хранение данных и высокая отказоустойчивость помогут вашему бизнесу быть на шаг впереди.
+    </p>
+    <button class="primary-btn">Запросить демо</button>
+  </div>
+
+  <!-- Окно чата (виджет) -->
+  <div class="chat-window" aria-live="polite" role="region" aria-label="Чат с ботом">
+    <div class="chat-header">VoxBot — Помощник</div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="bot-message">Привет! Я VoxBot. Напиши, чем могу помочь.</div>
+    </div>
+    <div class="chat-input">
+      <input id="chatInput" type="text" placeholder="Введите сообщение..." aria-label="Введите сообщение" />
+      <button id="chatSend" class="send-btn" aria-label="Отправить сообщение">➤</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Преимущества -->
+
+  <section class="section features" id="features">
+  <h2 class="section-title">Почему выбирают нас</h2>
+  <p class="section-subtitle">
+    Наши решения помогают бизнесу быстро внедрять голосовые ассистенты и интеллектуальные чат-боты, обеспечивая:
+    прозрачную архитектуру, быструю интеграцию, надежную безопасность и передовые технологии NLU и TTS. 
+    Мы повышаем эффективность обслуживания клиентов, сокращаем нагрузку на колл-центр и увеличиваем конверсию через автоматизацию диалогов.
+  </p>
+
+  <div class="features-cards">
+    <div class="card">
+      <h3>Быстрая интеграция</h3>
+      <p>Наши голосовые ассистенты и чат-боты подключаются к вашим CRM, ERP и другим системам всего за несколько дней, минимизируя время на запуск и обучение команды.</p>
+    </div>
+
+    <div class="card">
+      <h3>Продвинутое понимание языка</h3>
+      <p>С помощью передовых NLU-технологий мы точно распознаем намерения пользователей, поддерживаем контекст диалога и обеспечиваем естественную коммуникацию, включая сложные сценарии.</p>
+    </div>
+
+    <div class="card">
+      <h3>Голосовые технологии нового поколения</h3>
+      <p>Современные TTS-движки создают естественное звучание, а гибкая настройка голоса позволяет поддерживать фирменный стиль и создавать уникальный пользовательский опыт.</p>
+    </div>
+
+    <div class="card">
+      <h3>Безопасность и соответствие стандартам</h3>
+      <p>Мы соблюдаем международные стандарты безопасности и защиты данных, включая GDPR, что гарантирует безопасное взаимодействие с клиентами.</p>
+    </div>
+
+    <div class="card">
+      <h3>Аналитика и оптимизация</h3>
+      <p>Встроенные инструменты аналитики позволяют отслеживать эффективность диалогов, выявлять узкие места и улучшать сценарии взаимодействия для максимальной отдачи от инвестиций.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Тарифы -->
+  <!-- <section class="section pricing" id="pricing">
+    <h2 class="section-title">Тарифы</h2>
+    <div class="card">Старт</div>
+    <div class="card primary-card">Бизнес</div>
+    <div class="card">Энтерпрайз</div>
+  </section> -->
+  <section class="section pricing" id="pricing">
+  <h2 class="section-title">Тарифы</h2>
+  <p class="section-subtitle">
+    Выберите тариф, который соответствует вашему бизнесу. 
+    От быстрого старта с базовыми возможностями, до полного контроля над голосовыми ассистентами и интеллектуальными чат-ботами для крупных предприятий. 
+    Все тарифы включают безопасное хранение данных, интеграцию с CRM и аналитику для оптимизации диалогов.
+  </p>
+
+  <div class="pricing-cards">
+    <div class="card">
+      <h3>Старт</h3>
+      <p>Идеально для малого бизнеса или пилотного проекта. Быстрая интеграция, базовый набор функций голосового ассистента и чат-бота.</p>
+      <ul>
+        <li>До 1,000 запросов в месяц</li>
+        <li>Поддержка текстовых и голосовых сценариев</li>
+        <li>Базовая аналитика</li>
+      </ul>
+    </div>
+
+    <div class="card primary-card">
+      <h3>Бизнес</h3>
+      <p>Оптимальное решение для среднего бизнеса: расширенные возможности, кастомизация голосового ассистента и чат-бота, продвинутая аналитика и SLA.</p>
+      <ul>
+        <li>До 10,000 запросов в месяц</li>
+        <li>Гибкая настройка диалогов</li>
+        <li>Интеграция с CRM и ERP</li>
+        <li>Приоритетная поддержка</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Энтерпрайз</h3>
+      <p>Полный контроль над голосовыми каналами для крупных компаний. Максимальная производительность, кастомизация и безопасность, поддержка корпоративных стандартов.</p>
+      <ul>
+        <li>Неограниченное количество запросов</li>
+        <li>Индивидуальные настройки NLU и TTS</li>
+        <li>Полная аналитика и отчеты</li>
+        <li>Соблюдение корпоративных стандартов безопасности</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Кейсы -->
+<section class="section cases" id="cases">
+  <h2 class="section-title">Все, что нужно вашему бизнесу</h2>
+
+  <div class="case-cards">
+
+    <!-- Карточка 1 -->
+    <div class="neon-card" data-audio="assets/HR_recruitment_for_mass_vacancies.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">HR агенства</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Специалист по подбору персонала
+          </div>
+          <div class="neon-small">
+            Результат: <em>Соискатель проявил интерес к вакансии и дал согласие на проведение собеседивания</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="neon-card" data-audio="assets/NPS_survey_for_the_store.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">NPS опрос онлайн супермаркет</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Сотрудник онлайн супермаркета
+          </div>
+          <div class="neon-small">
+            Результат: <em>Покупатель с удовольствием ответитл на вопросы сотрудника онлайн супермаркета и был готов его рекомендовать</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="neon-card" data-audio="assets/Car_dealership_lead_gen.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Автосалоны</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Менеджер ассистент автосалона
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент принял приглашение на тест драйв нового автомобиля</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 4 -->
+    <div class="neon-card" data-audio="assets/NPS_barbershop.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">NPS опрос барбершоп</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Сотрудник отдела контроля качества
+          </div>
+          <div class="neon-small">
+            Результат: <em> Клиент дал согласие на право прислать ему сертификат</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 5 -->
+    <div class="neon-card" data-audio="assets/Online_store_oder_status.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Онлайн магазины</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Сотрудник онлайн магазина
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клмиент получил информацию о статусе заказа и сроках доставки</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 6 -->
+    <div class="neon-card" data-audio="assets/Food_delivery_order_confirmation.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Доставка еды</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Менеджер доставки еды
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент подтвердил адрес доставки и сумму заказа</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 7 -->
+    <div class="neon-card" data-audio="assets/Medicine_confirmation_appointment.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Медицинские услуги</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Сотрудник медицинской клиники
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент подтвердил запись к Подологу</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 8 -->
+    <div class="neon-card" data-audio="assets/Insurance_motor_OSAGO.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Страхование транспорт</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Онлайн агрегатор страховой компании
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент дал согласвие на повторный звонок и подтвердил свой регион</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 9 -->
+    <div class="neon-card" data-audio="assets/Payment_reminder.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Финансы</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Менеджер финансового отдела
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент сообщил о ранее внесенном платеже и попросил уточнить информацию о пуступлении средств</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 10 -->
+    <div class="neon-card" data-audio="assets/Leadgen_barbershop.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Привлечение клиентов</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Администратор Барбершоп
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент побтвердил приглашение в Барбершоп</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 11 -->
+    <div class="neon-card" data-audio="assets/Dentistry_making_appointment.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Стоматология</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Администратор стоматологической клиники
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент успешно записался на консультацию по установке виниров</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+
+    <!-- Карточка 12 -->
+    <div class="neon-card" data-audio="assets/Leadgen_real_estate.mp3">
+      <div class="neon-header">
+        <div class="neon-title-block">
+          <div class="neon-title">Недвижимость</div>
+          <div class="neon-subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+        </div>
+        <div class="neon-rating">
+          <div class="neon-stars" aria-hidden>
+            <span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span>
+          </div>
+          <div class="neon-reviews">4.7 · 124 отзыва</div>
+        </div>
+      </div>
+
+      <div class="neon-divider"></div>
+
+      <div class="neon-player">
+        <div class="neon-play-area">
+          <button class="neon-play-btn" id="neonPlayBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+            <svg id="neonIconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+            </svg>
+          </button>
+        </div>
+        <div class="neon-meta">
+          <div class="neon-transcript" id="neonCurrentLine">
+            Служба качаества агенства недвижимости
+          </div>
+          <div class="neon-small">
+            Результат: <em>Клиент уточнил подробности рассматриваемой к покупке квартиры и дал согласие на получение подборки</em>
+          </div>
+
+          <div class="neon-visual-wrap">
+            <div class="neon-visualizer" id="neonVisualizer">
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+              <div class="neon-bar" style="height:6px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="neon-examples"></div>
+    </div>
+  </div> <!-- /.case-cards -->
+
+</section>
+
+  <!-- Контакты -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-content">
+    <h2 id="contact-title" class="section-title">Свяжитесь с нами</h2>
+
+    <form class="contact-form" role="form" aria-label="Форма запроса демо">
+      <input placeholder="Ваш email" type="email" required aria-label="Ваш email" />
+      <input placeholder="Компания" type="text" required aria-label="Компания" />
+      <input placeholder="Телефон" type="text" required aria-label="Номер телефона">
+      <textarea placeholder="Краткое описание задачи" required aria-label="Краткое описание задачи"></textarea>
+
+      <div class="form-buttons">
+        <button type="submit" class="primary-btn">Отправить</button>
+        <button type="button" class="secondary-btn" onclick="window.open('https://t.me/your_telegram','_blank')">Связаться в Telegram</button>
+      </div>
+
+      <div class="privacy-note">
+        Нажимая «Запросить демо», вы соглашаетесь с нашей политикой конфиденциальности.
+      </div>
+    </form>
+  </div>
+
+  <aside class="contact-info" role="complementary" aria-label="Контактная информация">
+    <h4>Быстрая диагностика</h4>
+    <p>Поделитесь вашим сценарием, и мы предложим оптимальную интеграцию голосового канала.</p>
+    <ul>
+      <li>Объём запросов</li>
+      <li>Каналы: телефон, веб, мобильное приложение</li>
+      <li>Желаемый SLA и уровень безопасности</li>
+    </ul>
+    <div>Или свяжитесь с нами напрямую:</div>
+    <a href="mailto:sales@voxFlow.example">sales@voxFlow.example</a><br/>
+    <a href="tel:+1234567890">+1 (234) 567-890</a>
+  </aside>
+  </section>
+
+  <!-- Подвал -->
+  <!-- <footer class="section footer">
+    <p>© 2025 VoxFlow.AI</p>
+  </footer> -->
+  <footer class="section footer">
+  <div class="footer-info">
+    <p>Copyright © 2025 VoxFlow.AI Все права защищены.</p>
+    <p>ИП Фалев Максим Владимирович</p>
+    <p>ИНН: 123456789012 · ОГРНИП: 123456789012345</p>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://t.me/yourchannel1" target="_blank" aria-label="Telegram">
+      <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+  <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+</svg>
+
+    </a>
+    <a href="https://t.me/yourchannel2" target="_blank" aria-label="Telegram">
+      <svg width="26" height="26" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="120" fill="#2AABEE"/>
+  <path d="M180.6 67.2L157.7 176.4c-1.7 7.6-6.2 9.5-12.5 5.9l-34.6-25.5-16.7 16.1c-1.9 1.9-3.4 3.4-6.9 3.4l2.5-35 63.7-57.5c2.8-2.5-0.6-3.9-4.3-1.4l-78.7 49.5-33.9-10.6c-7.4-2.3-7.6-7.4 1.6-11L170 61.1c6.1-2.3 11.4 1.4 10.6 6.1z" fill="#fff"/>
+</svg>
+
+    </a>
+    <a href="https://wa.me/79990000000" target="_blank" aria-label="WhatsApp">
+<svg width="26" height="26" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="128" cy="128" r="128"/>
+    </clipPath>
+  </defs>
+  <circle cx="128" cy="128" r="128" fill="#25D366"/>
+  <g clip-path="url(#clip)">
+    <path fill="#fff" d="M187.3 68.7C172.6 54 152 46 128.8 46c-46 0-83.2 37.2-83.2 83.1 0 14.6 3.8 28.9 11 41.5L46 210l41-10.7c12 6.6 25.6 10.1 39.8 10.1 46 0 83.2-37.2 83.2-83.1 0-23.2-8-43.8-22.7-58.6Zm-58.5 121c-12.4 0-24.6-3.4-35.1-9.8l-2.5-1.5-24.3 6.4 6.5-23.7-1.6-2.5c-6.7-10.5-10.2-22.5-10.2-34.9 0-36.3 29.6-65.9 65.9-65.9 17.6 0 34.1 6.8 46.5 19.2 12.4 12.5 19.2 29 19.1 46.5 0 36.3-29.6 65.9-65.9 65.9Zm39.1-48.9c-2.1-1-12.6-6.2-14.6-6.9-2-.8-3.5-1.2-5 1.2-1.5 2.3-5.8 6.9-7.1 8.3-1.3 1.5-2.6 1.7-4.7.8-12.8-5.4-21.2-9.6-29.7-21.7-2.2-3.1 2.2-2.9 6.2-11.4.7-1.5.4-2.7-.2-3.9-.6-1.2-5-12.1-6.9-16.6-1.8-4.3-3.7-3.7-5-3.8-1.3-.1-2.8-.1-4.3-.1-1.5 0-4 1-6 3-2 2-7.9 7.7-7.9 18.7s8.1 21.7 9.2 23.2c1.1 1.5 16 24.5 38.8 33.2 22.8 8.7 22.8 5.8 26.9 5.5 4.1-.3 13.2-5.3 15.1-10.4 1.9-5.1 1.9-9.5 1.3-10.4-.5-.9-1.8-1.5-3.9-2.5Z"/>
+  </g>
+</svg>
+    </a>
+  </div>
+</footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/card.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- <!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon Vox — карточка голосового ассистента</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> -->
+  <div class="card">
+    <div class="header">
+      <div class="avatar" id="avatar" title="Neon Vox">
+        <!-- mic icon -->
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z" fill="#021218" />
+          <path d="M19 11a1 1 0 0 0-2 0 5 5 0 0 1-10 0 1 1 0 1 0-2 0 5 5 0 0 0 4 4.9V19a1 1 0 1 0 2 0v-3.1A5 5 0 0 0 19 11z" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+      </div>
+
+      <div class="title-block">
+        <div class="title">Neon Vox</div>
+        <div class="subtitle">Голосовой ассистент — дружелюбный стиль, русский язык</div>
+      </div>
+
+      <div class="rating">
+        <div class="stars" aria-hidden><span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:.4">★</span></div>
+        <div class="reviews">4.7 · 124 отзыва</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="player">
+      <div class="play-area">
+        <button class="play-btn" id="playBtn" aria-pressed="false" title="Воспроизвести / Пауза">
+          <svg id="iconPlay" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 3v18l15-9L5 3z" fill="#021218" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="meta">
+        <div class="transcript" id="currentLine">Пример: "Какая сегодня погода в Амстердаме?"</div>
+        <div class="small">Ответ: <em id="transcript">Привет! Сегодня в Амстердаме облачно, 8°C. Возьмёте зонтик?</em></div>
+
+        <div class="visual-wrap">
+          <div class="visualizer" id="visualizer">
+            <div class="bar" style="height:6px"></div>
+            <div class="bar" style="height:6px"></div>
+            <div class="bar" style="height:6px"></div>
+            <div class="bar" style="height:6px"></div>
+            <div class="bar" style="height:6px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="examples">
+      <div class="example">"Поставь музыку для работы" — быстрая реакция</div>
+      <div class="example">"Добавь торт в список покупок" — распознавание контекста</div>
+      <div class="example">"Напомни завтра в 9:00 о встрече" — естественный ответ</div>
+    </div>
+
+    <p class="note">Замените `assets/demo-voice.mp3`, чтобы использовать собственный пример звука.</p>
+  </div>
+
+  <script src="script.js"></script>
+<!-- </body>
+</html> -->

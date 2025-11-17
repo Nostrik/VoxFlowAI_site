@@ -1,0 +1,662 @@
+/* === Базовая тёмная тема VoxFlow (киберпанк версия) === */
+
+/* Подключаем кибер-шрифт Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Orbitron", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #0a0a12;
+  color: #e6e1ff;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 4px rgba(124, 58, 237, 0.3);
+}
+
+/* Ссылки */
+a {
+  color: #b3a9ff;
+  text-decoration: none;
+  transition: color 0.2s ease-out, text-shadow 0.3s ease-out;
+}
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #8a63ff;
+}
+
+/* Кнопки */
+button {
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  letter-spacing: 0.03em;
+}
+
+button.primary-btn {
+  background: linear-gradient(90deg, #8a63ff, #4a00ff);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(138, 99, 255, 0.4);
+}
+button.primary-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 40px rgba(138, 99, 255, 0.6);
+}
+
+button.secondary-btn {
+  background: transparent;
+  border: 1px solid #38384a;
+  color: #b3a9ff;
+  font-weight: 500;
+}
+button.secondary-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.4);
+}
+
+/* Поля ввода и формы */
+input,
+textarea {
+  background-color: transparent;
+  border: 1px solid #2e2e3f;
+  color: #e6e1ff;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  font-family: "Orbitron", sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #7a75a0;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Секции */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 24px;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(138, 99, 255, 0.5);
+}
+.section-subtitle {
+  color: #9aa0b2;
+  margin-bottom: 32px;
+}
+
+/* Шапка */
+.header-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Хедер внутри ограниченного контейнера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  max-width: 1200px; /* или любая ширина контейнера */
+  margin: 0 auto;
+  background: rgba(10, 10, 20, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+/* Логотип и навигация */
+.logo { font-size:1.6rem; font-weight:700; color:#8a63ff; text-shadow:0 0 8px rgba(124,58,237,0.5); }
+nav a { margin-left:20px; font-weight:500; color:#b3a9ff; text-decoration:none; }
+nav a:hover { color:#fff; text-shadow:0 0 8px #8a63ff; }
+
+/* Полноширинное подчёркивание */
+.header-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
+  height: 2px;
+  background: linear-gradient(90deg, rgba(138,99,255,0.8), rgba(74,0,255,0.8));
+  box-shadow: 0 0 10px rgba(138,99,255,0.4);
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* === HERO-СЕКЦИЯ: описание слева, чат справа === */
+.section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 100px 24px;
+  text-align: left;
+}
+
+.hero-content {
+  flex: 1 1 520px;
+  max-width: 720px;
+}
+
+.section.hero .section-title,
+.section.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(138, 99, 255, 0.6);
+}
+
+.section.hero .section-subtitle,
+.section.hero p {
+  max-width: 640px;
+  color: #b4b1c2;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* === Стили чат-бота === */
+.chat-window {
+  flex: 0 0 340px;
+  width: 340px;
+  max-width: calc(100% - 40px);
+  background: linear-gradient(180deg, rgba(18, 18, 24, 0.98), rgba(10, 10, 14, 0.98));
+  color: #e9eef8;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.25);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: "Orbitron", sans-serif;
+  animation: fadeInRight 0.9s ease;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.chat-header {
+  padding: 10px 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-shadow: 0 0 6px rgba(124, 58, 237, 0.5);
+}
+
+.chat-messages {
+  padding: 12px;
+  height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  line-height: 1.3;
+  word-break: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.bot-message {
+  background: rgba(255, 255, 255, 0.08);
+  align-self: flex-start;
+  color: #e6f0ff;
+}
+.user-message {
+  background: linear-gradient(90deg, rgba(138, 99, 255, 0.25), rgba(90, 60, 200, 0.25));
+  align-self: flex-end;
+  color: #eaf6ff;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: inherit;
+  outline: none;
+  font-family: "Orbitron", sans-serif;
+}
+
+.chat-input input::placeholder {
+  color: rgba(230, 235, 250, 0.5);
+}
+
+.chat-input .send-btn {
+  background: linear-gradient(180deg, #8a63ff, #5b21b6);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+.chat-input .send-btn:hover {
+  background: linear-gradient(180deg, #9a76ff, #6b2ce0);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+}
+
+/* === Карточки (общие) === */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(138, 99, 255, 0.3);
+  border-color: #8a63ff;
+}
+
+#card-container {
+  display: flex;       /* Включаем режим Flexbox для контейнера */
+  flex-wrap: wrap;     /* Разрешаем карточкам переноситься на новую строку */
+  gap: 20px;           /* Добавляем отступы между карточками (современный способ) */
+  justify-content: center; /* Центрируем карточки внутри контейнера */
+}
+
+.card {
+  /* Задаем ширину каждой карточки */
+  /* calc() позволяет вычесть половину gap'а из 50% (для 2 карточек в ряд) */
+  /* Или используем фиксированную ширину, например: */
+  width: 350px; 
+  
+  /* Или так, для 3 карточек в ряд: */
+  /* width: calc(33.333% - 20px); */ 
+
+  /* Добавьте сюда остальные стили вашей карточки (border, background, padding и т.д.) */
+  background: #0d1a2b;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* === Контактная форма и contact-info === */
+ .section.contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 60px 24px;
+  text-align: left;
+  overflow: visible; /* чтобы hover-подъём не обрезался */
+}
+
+ .contact-content {
+  position: relative; /* нужно для z-index и безопасного подъёма */
+  z-index: 11; /* header у тебя был z-index:10 — ставим 11, чтобы явно быть выше */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 24px;
+  color: #bcb8d0;
+  box-shadow: 0 6px 18px rgba(9, 9, 16, 0.6);
+
+  /* плавный переход для трансформации и декоративных свойств */
+  transition: transform 0.25s cubic-bezier(.2,.9,.2,1),
+              box-shadow 0.22s ease,
+              border-color 0.18s ease;
+  will-change: transform, box-shadow;
+  /* если у тебя уже есть margin/padding/width и т.п. — оставь их как есть */
+}
+
+.section.contact .contact-content:hover,
+.section.contact .contact-content:focus-within {
+  transform: translateY(-8px);
+  border-color: #8a63ff;
+  box-shadow: 0 14px 30px rgba(138,99,255,0.18);
+}
+
+.contact-info {
+  flex: 0 0 340px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 24px;
+  padding-bottom: 61px;
+  border-radius: 14px;
+  color: #bcb8d0;
+  box-shadow: 0 6px 18px rgba(9, 9, 16, 0.6);
+}
+
+.contact-info h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.contact-info p {
+  margin: 0 0 12px 0;
+  color: #c9c6dc;
+}
+.contact-info ul {
+  margin: 8px 0 56px 18px;
+  color: #c9c6dc;
+}
+.contact-info a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #b3a9ff;
+}
+
+/* Контактная форма внутри */
+.contact-form .form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.privacy-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* === FEATURES Секция (новая) === */
+.section.features {
+  padding: 80px 24px;
+}
+
+.features-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.features-cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(138, 99, 255, 0.6);
+}
+
+.features-cards .card p {
+  color: #bcb8d0;
+  line-height: 1.5;
+}
+
+/* === PRICING Секция === */
+.section.pricing {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.section.pricing .section-subtitle {
+  /* max-width: 720px; */
+  margin: 0 auto 40px auto;
+  color: #bcb8d0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.pricing-cards .card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(138, 99, 255, 0.35);
+  border-color: #8a63ff;
+}
+
+.pricing-cards .card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(138, 99, 255, 0.7);
+}
+
+.pricing-cards .card p {
+  font-size: 0.95rem;
+  color: #bcb8d0;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.pricing-cards .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #c9c6dc;
+}
+
+.pricing-cards .card ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+.pricing-cards .card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8a63ff;
+  font-weight: bold;
+}
+
+.primary-card {
+  background: linear-gradient(135deg, rgba(138,99,255,0.2), rgba(90,60,200,0.2));
+  border: 1px solid #8a63ff;
+  box-shadow: 0 0 20px rgba(138, 99, 255, 0.35);
+}
+
+/* Адаптивность */
+@media (max-width: 920px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Подвал */
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  color: #aaa;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: none;
+  overflow: visible;
+}
+
+/* Линия на всю ширину, без горизонтального скролла */
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; /* используем 100%, а не 100vw */
+  height: 2px;
+  background: linear-gradient(90deg, rgba(74, 0, 255, 0.6), rgba(138, 99, 255, 0.7));
+  box-shadow: 0 -4px 12px rgba(138, 99, 255, 0.06);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Растягиваем фон на всю ширину экрана */
+footer.section {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer-info p {
+  margin: 4px 0;
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.footer-social {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social a img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.8;
+  transition: 0.25s;
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.footer-social a svg path {
+  transition: fill 0.3s ease;
+}
+
+/* при наведении меняем все пути SVG на #8A63FF */
+.footer-social a:hover svg path {
+  fill: #8A63FF;
+}
+.footer-social a {
+  color: currentColor; /* начальный цвет задается индивидуально ниже */
+  transition: color 0.5s ease; /* плавность смены цвета */
+}
+
+.footer-social a svg circle {
+  fill: currentColor; /* круг перекрашивается через color */
+  transition: fill 0.5s ease; /* плавный переход */
+}
+
+/* начальный цвет иконок */
+.footer-social a:nth-child(1) { color: #2AABEE; } /* Telegram 1 */
+.footer-social a:nth-child(2) { color: #2AABEE; } /* Telegram 2 */
+.footer-social a:nth-child(3) { color: #25D366; } /* WhatsApp */
+
+/* ховер — общий цвет для всех */
+.footer-social a:hover {
+  color: #8A63FF;
+}
+
+
+/* === Адаптивность === */
+@media (max-width: 920px) {
+  .section.hero,
+  .section.contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .hero-content,
+  .contact-content {
+    flex: 1 1 auto;
+    max-width: 920px;
+    /* transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease; */
+  }
+
+  .contact-content:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
+  }
+
+  .section.hero .section-title,
+  .section.hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .chat-window {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .contact-info {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section.hero {
+    padding: 28px 12px;
+    gap: 18px;
+  }
+  .section.hero .section-title,
+  .section.hero h1 {
+    font-size: 1.6rem;
+  }
+  .chat-messages {
+    height: 200px;
+  }
+
+  .section.contact {
+    padding: 24px 12px;
+  }
+  .contact-info {
+    padding: 18px;
+    border-radius: 12px;
+  }
+  .contact-content {
+    padding: 18px;
+    border-radius: 12px;
+  }
+}
