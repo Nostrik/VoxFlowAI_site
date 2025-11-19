@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  telegram_bot:
+    build: ./
+    container_name: telegram_bot
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
