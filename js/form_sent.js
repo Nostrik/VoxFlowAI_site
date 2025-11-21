@@ -8,7 +8,7 @@ document.querySelector(".contact-form").addEventListener("submit", async (e) => 
         description: e.target[3].value
     };
 
-    await fetch("https://your-server.com/form-handler", {
+    await fetch("https://http://localhost:8080/form-handler", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

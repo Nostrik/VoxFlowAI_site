@@ -6,6 +6,8 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiohttp import web
+from aiohttp_cors import setup, ResourceOptions
+
 
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")  # ID чата, куда присылать данные
@@ -36,11 +38,14 @@ async def form_handler(request: web.Request):
 
 
 async def on_startup(app: web.Application):
-    await bot.send_message(
-        os.getenv("CHAT_ID"),
-        "🤖 Бот запущен и находится в сети!"
-    )
-    print("Startup message sent")
+    try:
+        await bot.send_message(
+            os.getenv("CHAT_ID"),
+            "🤖 Бот запущен и находится в сети!"
+        )
+        print("Startup message sent successfully!")
+    except Exception as e:
+        print(f"Failed to send startup message: {e}")
 
 
 @dp.message()
@@ -52,8 +57,18 @@ def main():
     app = web.Application()
 
     # Регистрируем endpoint формы
-    app.router.add_post("/form-handler", form_handler)
+    route = app.router.add_post("/form-handler", form_handler)
 
+    cors = setup(app, defaults={
+        "http://localhost:5500": ResourceOptions(
+            allow_credentials=True,
+            expose_headers=["X-Custom-Status"],
+            allow_headers=["X-Custom-Status", "Content-Type"],
+            allow_methods=["POST", "GET"] # Разрешаем методы POST и GET
+        )
+    })
+    for route in list(app.router.routes()):
+        cors.add(route)
     # Регистрируем startup callback
     app.on_startup.append(on_startup)
 
