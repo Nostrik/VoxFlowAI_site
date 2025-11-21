@@ -735,10 +735,14 @@
     <h2 id="contact-title" class="section-title">Свяжитесь с нами</h2>
 
     <form class="contact-form" role="form" aria-label="Форма запроса демо">
-      <input placeholder="Ваш email" type="email" required aria-label="Ваш email" />
+      <!-- <input placeholder="Ваш email" type="email" required aria-label="Ваш email" />
       <input placeholder="Компания" type="text" required aria-label="Компания" />
       <input placeholder="Телефон" type="text" required aria-label="Номер телефона">
-      <textarea placeholder="Краткое описание задачи" required aria-label="Краткое описание задачи"></textarea>
+      <textarea placeholder="Краткое описание задачи" required aria-label="Краткое описание задачи"></textarea> -->
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="company" placeholder="Компания" required>
+      <input type="tel" name="phone" placeholder="Телефон" required>
+      <textarea name="description" placeholder="Краткое описание задачи" required></textarea>
 
       <div class="form-buttons">
         <button type="submit" class="primary-btn">Отправить</button>
