@@ -735,10 +735,6 @@
     <h2 id="contact-title" class="section-title">Свяжитесь с нами</h2>
 
     <form class="contact-form" role="form" aria-label="Форма запроса демо">
-      <!-- <input placeholder="Ваш email" type="email" required aria-label="Ваш email" />
-      <input placeholder="Компания" type="text" required aria-label="Компания" />
-      <input placeholder="Телефон" type="text" required aria-label="Номер телефона">
-      <textarea placeholder="Краткое описание задачи" required aria-label="Краткое описание задачи"></textarea> -->
       <input type="email" name="email" placeholder="Email" required>
       <input type="text" name="company" placeholder="Компания" required>
       <input type="tel" name="phone" placeholder="Телефон" required>
@@ -747,6 +743,7 @@
       <div class="form-buttons">
         <button type="submit" class="primary-btn">Отправить</button>
         <button type="button" class="secondary-btn" onclick="window.open('https://t.me/your_telegram','_blank')">Связаться в Telegram</button>
+        <button type="button" class="secondary-btn" onclick="fillTestData()">Заполнить тестовые данные</button>
       </div>
 
       <div class="privacy-note">
@@ -770,9 +767,6 @@
   </section>
 
   <!-- Подвал -->
-  <!-- <footer class="section footer">
-    <p>© 2025 VoxFlow.AI</p>
-  </footer> -->
   <footer class="section footer">
   <div class="footer-info">
     <p>Copyright © 2025 VoxFlowAI Все права защищены.</p>
@@ -814,5 +808,20 @@
   <script src="./js/main.js"></script>
   <script src="./js/card.js"></script>
   <script src="./js/form_sent.js"></script>
+  <script>
+function fillTestData() {
+    const testData = {
+        email: "test@example.com",
+        company: "Тестовая компания ООО", 
+        phone: "+79991234567",
+        description: "Тестовое описание задачи для демонстрации работы формы"
+    };
+    
+    document.querySelector('[name="email"]').value = testData.email;
+    document.querySelector('[name="company"]').value = testData.company;
+    document.querySelector('[name="phone"]').value = testData.phone;
+    document.querySelector('[name="description"]').value = testData.description;
+}
+</script>
 </body>
 </html>

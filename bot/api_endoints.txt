@@ -1,0 +1,11 @@
+# Статистика
+curl http://localhost:8080/stats
+
+# Поиск заявок
+curl "http://localhost:8080/search?q=test@example.com"
+
+# Получить заявку по ID
+curl http://localhost:8080/request/15
+
+# Последние 5 заявок
+curl "http://localhost:8080/recent?limit=5"

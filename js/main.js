@@ -10,14 +10,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Form submit handler (demo placeholder)
-const contactForm = document.querySelector('.contact-form');
-if(contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Форма отправлена! (демо-режим)');
-    contactForm.reset();
-  });
-}
+// const contactForm = document.querySelector('.contact-form');
+// if(contactForm) {
+//   contactForm.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     alert('Форма отправлена! (демо-режим)');
+//     contactForm.reset();
+//   });
+// }
 
 // Chat widget behavior (VoxBot)
 (function() {
