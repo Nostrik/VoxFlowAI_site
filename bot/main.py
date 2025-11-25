@@ -234,7 +234,7 @@ def main():
     app.on_startup.append(on_startup)
 
     print("🚀 Сервер запущен на http://localhost:8080")
-    print("📝 Форма будет отправлять данные на http://localhost:8080/form-handler")
+    print("📝 Форма будет отправлять данные на http://88.210.53.86:8080/form-handler")
     
     web.run_app(app, host="0.0.0.0", port=8080)
 

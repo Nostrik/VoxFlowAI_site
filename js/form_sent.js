@@ -24,7 +24,7 @@ document.querySelector(".contact-form").addEventListener("submit", async (e) => 
     
     try {
         console.log("Отправка запроса...");
-        const response = await fetch("http://localhost:8080/form-handler", {
+        const response = await fetch("http://88.210.53.86:8080/form-handler", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
