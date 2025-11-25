@@ -298,19 +298,25 @@ nav a:hover { color:#fff; text-shadow:0 0 8px #8a63ff; }
 }
 
 .card {
-  /* Задаем ширину каждой карточки */
-  /* calc() позволяет вычесть половину gap'а из 50% (для 2 карточек в ряд) */
-  /* Или используем фиксированную ширину, например: */
+  display: flex;
+  flex-direction: column;
   width: 350px; 
-  
-  /* Или так, для 3 карточек в ряд: */
-  /* width: calc(33.333% - 20px); */ 
-
-  /* Добавьте сюда остальные стили вашей карточки (border, background, padding и т.д.) */
   background: #0d1a2b;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.card-cont-footer {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 25px;
+  padding-right: 35px;
+  opacity: 0.6;
+}
+
+.card-cont-ul {
+  opacity: 0.4;
 }
 
 /* === Контактная форма и contact-info === */
@@ -441,7 +447,7 @@ nav a:hover { color:#fff; text-shadow:0 0 8px #8a63ff; }
 
 .pricing-cards .card {
   flex: 1 1 260px;
-  max-width: 320px;
+  max-width: 350px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
