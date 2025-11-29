@@ -614,7 +614,7 @@ footer.section {
   .section.contact {
     flex-direction: column;
     align-items: center;
-    padding: 40px 16px;
+    padding: 100px 16px;
     gap: 28px;
     text-align: center;
   }
@@ -651,7 +651,7 @@ footer.section {
 
 @media (max-width: 420px) {
   .section.hero {
-    padding: 28px 12px;
+    padding: 130px 12px;
     gap: 18px;
   }
   .section.hero .section-title,
