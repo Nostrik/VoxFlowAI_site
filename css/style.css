@@ -105,8 +105,11 @@ textarea {
 
 /* Шапка */
 .header-wrapper {
-  position: relative;
+  position: fixed;   /* прилипает к верхнему краю */
+  top: 0;            /* верхний край */
+  left: 0;
   width: 100%;
+  z-index: 999;
 }
 
 /* Хедер внутри ограниченного контейнера */
@@ -122,6 +125,11 @@ textarea {
   -webkit-backdrop-filter: blur(10px);
   position: relative;
   z-index: 10;
+
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 24px;
 }
 
 /* Логотип и навигация */
