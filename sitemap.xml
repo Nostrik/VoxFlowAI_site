@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <!-- Главная страница -->
+   <url>
+     <loc>https://voxflowai.ru/</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>1.0</priority>
+   </url>
+
+   <!-- Раздел “Преимущества” -->
+   <url>
+     <loc>https://voxflowai.ru/#advantages</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+
+   <!-- Раздел “Продукты” -->
+   <url>
+     <loc>https://voxflowai.ru/#products</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+
+   <!-- Раздел “Тарифы” -->
+   <url>
+     <loc>https://voxflowai.ru/#pricing</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.7</priority>
+   </url>
+
+   <!-- Раздел “Контакты” -->
+   <url>
+     <loc>https://voxflowai.ru/#contacts</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>yearly</changefreq>
+     <priority>0.6</priority>
+   </url>
+
+   <!-- Форма «Запросить демо» или /contact, если есть такая страница -->
+   <url>
+     <loc>https://voxflowai.ru/</loc>
+     <lastmod>2025-11-29</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.6</priority>
+   </url>
+
+</urlset>
